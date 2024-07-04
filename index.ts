@@ -1,5 +1,6 @@
 import {Stack, CList} from "./algorithms/DataStructures"
 import {CatalanNumber} from "./algorithms/Dynamic"
+import {binarySearch, linearSearch, interpolationSearch} from "./algorithms/Searching"
 
 console.log("hello world")
 
@@ -24,7 +25,7 @@ console.log(CatalanNumber(6))
 
 let clist = new CList()
 
-let artist = ["jcole", "tupac", "kendrick lamar"]
+let artist = ["jcole", "tupac", "kendrick lamar", "post malone", "lil uzi vert", "kanye west", "drake", "travis scott", "lil baby", "lil wayne"]
 
 let add = function(x: any){clist.append(x)}
 
@@ -40,3 +41,12 @@ console.log(clist.display())
 clist.delete("port")
 
 console.log(clist.display())
+
+console.log(linearSearch(artist, "post malone"))
+
+let numbers  = [10, 14, 19, 26, 27, 31, 33, 35, 42, 44]
+
+console.log(`binary search: the position of 31 in ${numbers} is ${binarySearch(numbers, 31)}`)
+
+
+console.log(`interpolation search the position of 31 in ${numbers} is ${interpolationSearch(numbers, 31)}`)
